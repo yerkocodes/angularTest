@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <ul class="list-group">
+    <li *ngFor="let libro of libros;index as indice; first as esPrimero; last as esUltimo; odd as esPar; even as esInpar" class="list-group-item p-3">
+      <!--{{ indice + 1 }} - <a (click)="mostrarAutor(libro)" target="_blank">{{ libro.autor }}</a> - {{ libro.titulo }}-->
+      <a [routerLink]="['/detalles', libro.id]">{{ libro.titulo }}</a>
+      <!--<span *ngIf=" libro.titulo == 'Narnia' "> Narnia encontrado!</span>-->
+      <span [ngStyle]="{'background':'black'}" *ngIf="esPrimero"> Primero </span>
+      <span [ngStyle]="{'background':'black'}" *ngIf="esUltimo"> Ultimo </span>
+
+      <!--odd es para elementos pares-->
+      <span [ngStyle]="{'background':'blue'}" *ngIf="esPar"> Es Par </span>
+      <!--even es para elementos inpares-->
+      <span [ngStyle]="{'background':'green'}" *ngIf="esInpar"> Es Inpar </span>
+    </li>
+  </ul> 
+</div>
