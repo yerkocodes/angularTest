@@ -10,6 +10,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './landing/header/header.component';
 import { DetallesComponent } from './detalles/detalles.component';
 
+import { LibrosseleccionadosService } from './librosseleccionados.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { DetallesComponent } from './detalles/detalles.component';
     AppRoutingModule
   ],
   providers: [
+    LibrosseleccionadosService,
   ],
   bootstrap: [AppComponent]
 })
