@@ -16,3 +16,19 @@
     </div>
   </div>
 </nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <button class="mostrar-libros" (click)="mostrarLista = !mostrarLista"> <i class="fas fa-book"></i> </button>
+
+    <div class="misLibros" *ngIf="mostrarLista">
+      <h2>Mis Libros</h2>
+      <ul>
+        <li>El retrato de Dorian Gray.</li>
+        <li>Frankenstein.</li>
+      </ul>
+    </div>
+
+    <h1>Club de Libros</h1>
+  </div>
+</div>

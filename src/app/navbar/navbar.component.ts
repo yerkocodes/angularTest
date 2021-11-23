@@ -9,6 +9,8 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
+  mostrarLista:boolean = false;
+
   ngOnInit(): void {
   }
 
