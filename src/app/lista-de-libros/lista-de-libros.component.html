@@ -2,7 +2,9 @@
   <ul class="list-group">
     <li *ngFor="let libro of libros;index as indice; first as esPrimero; last as esUltimo; odd as esPar; even as esInpar" class="list-group-item p-3">
       <!--{{ indice + 1 }} - <a (click)="mostrarAutor(libro)" target="_blank">{{ libro.autor }}</a> - {{ libro.titulo }}-->
-      <a [routerLink]="['/detalles', libro.id]">{{ libro.titulo }}</a>
+
+      <a [routerLink]="['/detalles', libro.id]">{{indice + 1}}.- {{ libro.titulo }}</a>
+
       <!--<span *ngIf=" libro.titulo == 'Narnia' "> Narnia encontrado!</span>-->
       <span [ngStyle]="{'background':'black'}" *ngIf="esPrimero"> Primero </span>
       <span [ngStyle]="{'background':'black'}" *ngIf="esUltimo"> Ultimo </span>
@@ -13,4 +15,13 @@
       <span [ngStyle]="{'background':'green'}" *ngIf="esInpar"> Es Inpar </span>
     </li>
   </ul> 
+
+  <div class="errorLista d-flex justify-content-center align-items-center flex-column" *ngIf="errorHttp">
+    <p>Lo sentimos pero la lista de libros no puede ser mostrada.</p>
+  </div>
+
+  <div class="loading text-center " *ngIf="cargando">
+    <h3>Cargando...</h3>
+  </div>
+
 </div>

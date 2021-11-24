@@ -10,6 +10,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './landing/header/header.component';
 import { DetallesComponent } from './detalles/detalles.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 import { LibrosseleccionadosService } from './librosseleccionados.service';
 
 @NgModule({
@@ -24,7 +26,8 @@ import { LibrosseleccionadosService } from './librosseleccionados.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     LibrosseleccionadosService,

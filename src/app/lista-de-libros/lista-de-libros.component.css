@@ -22,3 +22,13 @@ a {
 a:hover{
   color: red;
 }
+
+.errorLista {
+  background: #fffcc8;
+  padding: 30px;
+}
+
+.errorLista h1, p {
+  color: #807900;
+  margin: 0;
+}
