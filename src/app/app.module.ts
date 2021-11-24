@@ -13,6 +13,7 @@ import { DetallesComponent } from './detalles/detalles.component';
 import { HttpClientModule } from '@angular/common/http'
 
 import { LibrosseleccionadosService } from './librosseleccionados.service';
+import { ListaDePaisesComponent } from './lista-de-paises/lista-de-paises.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LibrosseleccionadosService } from './librosseleccionados.service';
     LandingComponent,
     HeaderComponent,
     DetallesComponent,
+    ListaDePaisesComponent,
   ],
   imports: [
     BrowserModule,
