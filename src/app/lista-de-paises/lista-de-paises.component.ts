@@ -8,7 +8,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 export class ListaDePaisesComponent implements OnInit {
 
   paises:Array<{ id: number, nombre: string }>
-  //paises:any;
+  elementoAntiguo!:HTMLElement;
 
     constructor( private renderer:Renderer2 ) {
       this.paises = [
@@ -21,7 +21,11 @@ export class ListaDePaisesComponent implements OnInit {
     }
 
   mostrarActivo(element:HTMLElement){
+    if(this.elementoAntiguo){
+      this.renderer.removeClass(this.elementoAntiguo, 'destacado');
+    }
     this.renderer.addClass(element, 'destacado');
+    this.elementoAntiguo = element;
   }
 
   ngOnInit(): void {
