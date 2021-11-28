@@ -1,3 +1,8 @@
-<ul>
-  <li *ngFor="let pais of paises" (click)="mostrarActivo(miItem)" #miItem >{{pais.nombre}}</li>
-</ul>
+<div class="container">
+  <ul>
+    <li *ngFor="let pais of paises" (click)="mostrarActivo(miItem, viajeBoton)" #miItem >{{pais.nombre}}</li>
+  </ul>
+
+  <input type="button" disabled value="No puedes viajar aun." #viajeBoton>
+</div>
+

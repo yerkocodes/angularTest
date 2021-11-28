@@ -20,11 +20,20 @@ export class ListaDePaisesComponent implements OnInit {
       ]
     }
 
-  mostrarActivo(element:HTMLElement){
+  mostrarActivo(element:HTMLElement, boton:HTMLElement){
     if(this.elementoAntiguo){
       this.renderer.removeClass(this.elementoAntiguo, 'destacado');
     }
     this.renderer.addClass(element, 'destacado');
+    this.renderer.setAttribute(element, "data-seleccionado", "true");
+
+    let nuevoElemento = this.renderer.createElement("span");
+    this.renderer.setProperty(nuevoElemento, "innerHTML", "✅");
+    this.renderer.appendChild(element, nuevoElemento);
+
+    this.renderer.setAttribute(boton, "value", "A viajar ✈️");
+    this.renderer.removeAttribute(boton, "disabled");
+
     this.elementoAntiguo = element;
   }
 

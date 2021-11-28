@@ -14,3 +14,7 @@ span {
   padding: 15px;
   color: #fff;
 }
+
+li[data-seleccionado]:not(.destacado){
+  background: silver;
+}
